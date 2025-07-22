@@ -109,6 +109,49 @@ int main() {
    printf("PIB per Capita: R$ %0.2f\n", pibperB);
    printf("Superpoder: %0.2f\n", spowerB);
 
+   printf("\nComparação de Cartas:\n");
+
+   if (populacaoA > populacaoB) {
+        printf("Quantidade de Habitantes: Carta1 Venceu!(1)\n");
+   } else {
+        printf("Quantidade de Habitantes: Carta2 Venceu!(0)\n");
+   }
+
+   if (areaA > areaB) {
+        printf("Área (Km²): Carta1 Venceu!(1)\n");
+   } else {
+        printf("Área (Km²): Carta2 Venceu!(0)\n");
+   }
+
+   if (pibA > pibB) {
+        printf("PIB: Carta1 Venceu!(1)\n");
+   } else {
+        printf("PIB: Carta2 Venceu!(0)\n");
+   }
+
+   if (pturisticosA > pturisticosB) {
+        printf("Número de Pontos Turísticos: Carta1 Venceu!(1)\n");
+   } else {
+        printf("Número de Pontos Turísticos: Carta2 Venceu!(0)\n");
+   }
+
+   if (dpopA < dpopB) {
+        printf("Densidade Populacional: Carta1 Venceu!(1)\n");
+   } else {
+        printf("Densidade Populacional: Carta2 Venceu!(0)\n");
+   }
+
+   if (pibperA > pibperB) {
+        printf("PIB per Capita: Carta1 Venceu!(1)\n");
+   } else {
+        printf("PIB per Capita: Carta2 Venceu!(0)\n");
+   } 
    
+   if (spowerA > spowerB) {
+        printf("PIB per Capita: Carta1 Venceu!(1)\n");
+   } else {
+        printf("PIB per Capita: Carta2 Venceu!(0)\n");
+   } 
+
     return 0;
 }
