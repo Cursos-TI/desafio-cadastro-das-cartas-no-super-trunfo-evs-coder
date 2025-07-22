@@ -1,134 +1,78 @@
 #include <stdio.h>
 
 // Desafio Super Trunfo - Países
-// Tema 2 - Comparação das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de comparação de cartas de cidades. 
+// Tema 1 - Cadastro das Cartas
+// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
 // Siga os comentários para implementar cada parte do desafio.
+//Teste larissa
 
 int main() {
-    
-    //iniciar programa
+    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
+    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
 
-    printf("\nWELCOME TO SUPER TRUNFO!\n");
-    
-    // Definição das variáveis para armazenar as propriedades das cidades
-    // Você pode utilizar o código do primeiro desafio
-    //informacoes da carta1:
+    //informações da carta A:
 
-    char estado1;
-    int codigo1;
-    char cidade1[20];
-    int populacao1;
-    float area1;
-    float pib1;
-    int pturisticos1;
+    char estadoA;
+    int codigoA;
+    char cidadeA[20];
+    int populacaoA;
+    float areaA;
+    float pibA;
+    int pturisticosA;
 
-    //informacoes da carta2:
+    //informações da carta B:
 
-    char estado2;
-    int codigo2;
-    char cidade2[20];
-    int populacao2;
-    float area2;
-    float pib2;
-    int pturisticos2;
-    
+    char estadoB;
+    int codigoB;
+    char cidadeB[20];
+    int populacaoB;
+    float areaB;
+    float pibB;
+    int pturisticosB;
     
     // Cadastro das Cartas:
-    // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
-    // utilizando a função scanf para capturar as entradas.
-    // Limpar buffer e utilizar fgets para capturar strings com espaços.
-    // utilize o código do primeiro desafio
-
-    // Exemplo:
-    // printf("Digite o código da cidade: ");
-    // scanf("%s", codigo);
-    // 
-    // (Repita para cada propriedade)
-
-    //inserir informações da carta1
-
-    printf("\nInsira as informacoes da primeira carta:\n");
-    printf("\nEstado (letra de A-H): ");
-    scanf (" %c", &estado1);
+    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
+    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
+    
+    printf("\nInsira as informações da primeira carta:\n");
+    
+    printf("Estado: ");
+    scanf(" %c", &estadoA);
     printf("Código (1-4): ");
-    scanf("%d", &codigo1);
-
-    int c;
-    while((c = getchar()) != '\n' && c != EOF);
-
+    scanf("%d", &codigoA);
     printf("Nome da Cidade: ");
-    fgets(cidade1, 20, stdin);
-
+    scanf(" %c", 20, cidadeA);
     printf("Número de Habitantes: ");
-    scanf("%d", &populacao1);
-    printf("Área (Km²): ");
-    scanf("%f", &area1);
+    scanf("%d", &populacaoA);
+    printf("Área (km²): ");
+    scanf("%f", &areaA);
     printf("PIB: R$ ");
-    scanf("%f", &pib1);
+    scanf("%f", &pibA);
     printf("Quantidade de Pontos Turísticos: ");
-    scanf("%d", &pturisticos1);
+    scanf("%d", &pturisticosA);
 
-    //inserir informações da carta2
-
-    printf("\nInsira as informações da segunda carta:\n");
-    printf("\nEstado (letra de A-H): ");
-    scanf (" %c", &estado2);
+    rintf("\nInsira as informações da segunda carta:\n");
+    
+    printf("Estado: ");
+    scanf(" %c", &estadoB);
     printf("Código (1-4): ");
-    scanf("%d", &codigo2);
-
-    while((c = getchar()) != '\n' && c != EOF);
-
+    scanf("%d", &codigoB);
     printf("Nome da Cidade: ");
-    fgets(cidade2, 20, stdin);
-
+    scanf(" %c", 20, cidadeB);
     printf("Número de Habitantes: ");
-    scanf("%d", &populacao2);
-    printf("Área (Km²): ");
-    scanf("%f", &area2);
+    scanf("%d", &populacaoB);
+    printf("Área (km²): ");
+    scanf("%f", &areaB);
     printf("PIB: R$ ");
-    scanf("%f", &pib2);
-    printf("Quantidade de pontos turísticos: ");
-    scanf("%d", &pturisticos2);
+    scanf("%f", &pibB);
+    printf("Quantidade de Pontos Turísticos: ");
+    scanf("%d", &pturisticosB);
 
-    printf("\nAs duas cartas inseridas foram:\n");
+    // Exibição dos Dados das Cartas:
+    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
+    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
-    printf("\nCarta 1:\n");
-    printf("Estado: %c\n", estado1);
-    printf("Código: %c%02d\n", estado1, codigo1);
-    printf("Nome da Cidade: %s", cidade1);
-    printf("População: %d\n", populacao1);
-    printf("Área (Km²): %.2f\n", area1);
-    printf("PIB: R$ %.2f\n", pib1);
-    printf("Número de Pontos Turísticos: %d\n", pturisticos1);
-
-    printf("\nCarta 2:\n");
-    printf("Estado: %c\n", estado2);
-    printf("Código: %c%02d\n", estado2, codigo2);
-    printf("Nome da Cidade: %s", cidade2);
-    printf("População: %d\n", populacao2);
-    printf("Área (Km²): %.2f\n", area2);
-    printf("PIB: R$ %.2f\n", pib2);
-    printf("Número de Pontos Turísticos: %d\n", pturisticos2);
-
-
-    // Comparação de Cartas:
-    // Desenvolva a lógica de comparação entre duas cartas.
-    // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
-
-    // Exemplo:
-    // if (populacaoA > populacaoB) {
-    //     printf("Cidade 1 tem maior população.\n");
-    // } else {
-    //     printf("Cidade 2 tem maior população.\n");
-    // }
-
-    // Exibição dos Resultados:
-    // Após realizar as comparações, exiba os resultados para o usuário.
-    // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
-
-    // Exemplo:
-    // printf("A cidade vencedora é: %s\n", cidadeVencedora);
-
+   
+   
     return 0;
 }
