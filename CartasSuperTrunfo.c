@@ -77,11 +77,11 @@ int main() {
 
     float dpopA = populacaoA / areaA;
     float pibperA = pibA / populacaoA;
-    float spowerA = populacaoA + areaA + pibA + pturisticosA + dpopA +pibperA;
+    float spowerA = populacaoA + areaA + pibA + pturisticosA + (1/dpopA) +pibperA;
     
     float dpopB = populacaoB / areaB;
     float pibperB = pibB / populacaoB;
-    float spowerB = populacaoB + areaB + pibB + pturisticosB + dpopB +pibperB;
+    float spowerB = populacaoB + areaB + pibB + pturisticosB + (1/dpopB) +pibperB;
 
    printf("\nAs Cartas Criadas Foram:\n");
    
@@ -112,7 +112,7 @@ int main() {
    printf("\nComparação de Cartas:\n");
 
    if (populacaoA > populacaoB) {
-        printf("Quantidade de Habitantes: Carta1 Venceu!(1)\n");
+        printf("\nQuantidade de Habitantes: Carta1 Venceu!(1)\n");
    } else {
         printf("Quantidade de Habitantes: Carta2 Venceu!(0)\n");
    }
@@ -148,9 +148,9 @@ int main() {
    } 
    
    if (spowerA > spowerB) {
-        printf("PIB per Capita: Carta1 Venceu!(1)\n");
+        printf("Super Poder: Carta1 Venceu!(1)\n");
    } else {
-        printf("PIB per Capita: Carta2 Venceu!(0)\n");
+        printf("Super Poder: Carta2 Venceu!(0)\n");
    } 
 
     return 0;
